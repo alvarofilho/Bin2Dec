@@ -21,20 +21,19 @@
 	<p>Enter a binary number, get a decimal conversion.</p>
 
 	{#if !isValid}
-	<p class="erro">You entered a non-binary digit (please enter only 0 or 1).</p>
+		<p class="erro">You entered a non-binary digit (please enter only 0 or 1).</p>
 	{/if}
 
-	<input bind:value={value} type="text" minlength="1" maxlength="20" on:input={convertToDec} autoFocus>
+	<input bind:value={value} type="text" minlength="1" maxlength="20" on:input={convertToDec}>
 
 	{#if result != null && isValid}
-	<p>{result}</p>
+		<p>{result}</p>
 	{:else}
-	<p>🤷Waiting for a valid binary number...</p>
+		<p>Waiting for a valid binary number...</p>
 	{/if}
 
 	<footer>
-		<p>By <a url=#>Álvaro Filho</a></p>
-		<p>Github</p>
+		<p>By <a href=https://github.com/alvarofilho>Álvaro Filho</a></p>
 	</footer>
 </main>
 
